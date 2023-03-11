@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'MYYeongnamnu';
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.total{
+    text-align: right;
+    background: url('https://cdn.pixabay.com/photo/2015/10/16/19/18/balloon-991680_960_720.jpg');
+    padding: 50px;
+    text-shadow: 4px -1px 5px rgb(224, 75, 75);
+    width: 640px;
+    height: 400px;
+    margin: 5rem auto;
+    border-radius: 5rem;
+}
+
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2.5em;
+}
+p{
+    font-size: 4em;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 3px skyblue;
+    margin: 70px auto;
+}
