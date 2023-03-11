@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+}
+
+.wrapper{
+    background: 960px 640px url('https://cdn.pixabay.com/photo/2014/02/07/11/36/couple-260899_960_720.jpg');
+    width: 960px;
+    height: 640px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-rows: 3.8fr 0.5fr 1fr;
+}
+p{
+    background: #ffb4e2b4;
+    grid-area: 2/3/4/4;
+    height: 50px;
+    border-radius: 0px 50px 50px;
+    box-shadow: 0px 0px 5px 3px rgb(230, 107, 164);
+    font-size: 35px;
+    /* margin: 10px auto; */
+}
