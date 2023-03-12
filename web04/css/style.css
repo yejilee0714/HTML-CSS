@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding: 50px;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.wrapper {
+    border: solid black;
+    position: relative;
+}
+
+.wrapper::before{
+    content: "";
+    background: url('../image/background.jpg');
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+header,
+main {
+    margin: 100px;
+    /* opacity: 0.5; */
+    position: relative;
+}
+
+header{
+    font-size: 150%;
+    text-align: right;
+}
+h1{
+    margin-bottom: 10px;
+}
+h2{
+    margin-top: 0px;
+}
+h3{
+    margin: 40px auto 20px;
+}
+p{
+    margin: 16px auto;
+}
+main ul, ol{
+    margin: 16px auto;
+    padding-left: 20px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image-area text-area";
+}
+
+main .content-text{
+    padding: 30px;
+    font-weight: bold;
+}
+
+main table{
+    text-align: center;
+    border: 5px solid rgba(160, 121, 252, 0.945);
+    border-collapse: collapse;
+}
+
+th,
+td{
+    width: 120px;
+    height: 28px;
+}
+
+main table th{
+    background-color: rgba(160, 121, 252, 0.945);
+    border: 3px solid rgba(183, 152, 255, 0.945);
+}
+
+main table td{
+    border: 3px solid rgba(183, 152, 255, 0.945);
+}
+
+.zero{
+    background: rgb(183, 152, 255);
+}
+
+footer ul{
+    list-style: none;
+    height: 20px;
+    padding: 20px;
+}
+
+footer li{
+    float: left;
+}
+
+footer li:first-child{
+    border-right: 3px solid;
+}
+
+footer a{
+    margin: auto 20px;
+}
