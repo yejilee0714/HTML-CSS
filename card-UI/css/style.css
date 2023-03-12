@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(212, 212, 212);
+}
+
+.wrapper{
+    margin: 30px auto;
+    width: 288px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.image{
+    box-shadow: 0px 0px 3px 1px black;
+}
+
+img{
+    vertical-align: top;
+    max-width: 288px;
+    max-height: 196px;
+}
+
+.text{
+    box-shadow: 0px 0px 3px 1px black;
+    padding: 25px 16px;
+}
+
+h1{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+p{
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 19px;
+}
+
+a{
+    font-size: 14px;
+}
