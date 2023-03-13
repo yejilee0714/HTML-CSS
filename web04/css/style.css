@@ -60,14 +60,26 @@ main ul, ol{
 }
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "image-area text-area";
 }
 
+
 main .content-text{
     padding: 30px;
     font-weight: bold;
+    grid-template-areas: "text-area";
+}
+
+main .content-image{
+    grid-template-areas: "image-area";
+    text-align: center;
+}
+
+main .content-image img{
+    width: 80%;
+    height: 80%;
 }
 
 main table{
@@ -79,7 +91,7 @@ main table{
 th,
 td{
     width: 120px;
-    height: 28px;
+    height: 25px;
 }
 
 main table th{
@@ -93,6 +105,10 @@ main table td{
 
 .zero{
     background: rgb(183, 152, 255);
+}
+
+footer{
+    position: relative;
 }
 
 footer ul{
@@ -111,4 +127,16 @@ footer li:first-child{
 
 footer a{
     margin: auto 20px;
+}
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: rgb(165, 165, 165);
 }
