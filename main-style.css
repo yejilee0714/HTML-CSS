@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    content: "";
+    background: url('./main-img/background.jpg');
+}
+
+.wrapper {
+    border: solid black;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header,
+main{ 
+    padding: 30px;
+    width: 300px;
+}
+
+header {
+    box-shadow: 0px 0px 5px 5px black;
+    text-align: center;
+}
+
+main {
+    box-shadow: 0px 0px 5px 5px black;
+}
+a:link{
+    color: #fff;
+}
+
+a:visited{
+    color: #fff;
+}
+
+a:hover{
+    color: salmon;
+}
