@@ -34,6 +34,11 @@ ul, li{
 	position: absolute;
 }
 
+.none-pointer{
+	pointer-events: none;
+	cursor: default;
+}
+
 /* 공통 */
 [class$="section"]{
 	padding: 100px 0px;
@@ -71,7 +76,7 @@ p{
 }
 
 .content{
-	margin: 100px auto;
+	margin-top: 100px;
 	display: flex;
 	gap: 24px;
 }
@@ -144,7 +149,7 @@ p{
 	padding: 5px 8px;
 }
 
-.seashell-section p,.seashell-section span{
+.seashell-section p,.seashell-section a{
 	color: #7a7a7a;
 }
 
@@ -166,7 +171,7 @@ p{
 }
 
 .seashell-section .explanation:nth-child(4){
-	flex-grow: 1;
+	flex-grow: 0.5;
 }
 
 .seashell-section p{
@@ -179,10 +184,55 @@ p{
 	font-size: 12px;
 	margin-top: 24px;
 	padding-top: 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 }
 
-.plus-info:nth-child(1){
-	pointer-events: none;
+.plus-info span{
+	font-size: inherit;
+	padding: 3px 0px;
+}
+
+.people-group img{
+	max-width: 30px;
+	max-height: 30px;
+	border: 5px solid white;
+	border-radius: 50%;
+	top: 50%;
+	transform: translate(50%, -15%);
+}
+
+.people-group img:first-of-type{
+	position: absolute;
+	right: 21%;
+	z-index: 1;
+}
+
+.people-group img:nth-of-type(2){
+	position: absolute;
+	right: 13%;
+	z-index: 2;
+}
+
+.people-group img:nth-of-type(3){
+	position: absolute;
+	right: 5%;
+	z-index: 3;
+}
+
+.seashell-section .image{
+	position: relative;
+}
+
+.soldout-badge {
+	position: absolute;
+	/* background: url(./images/badge.png); */
+	z-index: 1;
+	max-width: 30%;
+	max-height: 40%;
+	transform: translate(-8%, -8%);
 }
 
 /* purple-section */
@@ -280,6 +330,17 @@ p{
 
 @media(max-width: 1080px){ 
 	.l_wrapper{
-		width: 100%;
+		width: 80%;
+	}
+
+	.seashell-section .content{
+		flex-direction: column;
+	}
+
+	/* 보라파트 반응형 */
+
+	.purple-section .list:nth-of-type(2){
+		flex-direction: column;
+		justify-content: initial;
 	}
 }
