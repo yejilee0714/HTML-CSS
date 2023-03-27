@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li, div, section, body, header, span{
 	font-size: initial;
 }
 
+a{
+	color: initial;
+	text-decoration: none;
+}
+
 button{
 	border: none;
 	background: none;
@@ -116,6 +121,7 @@ p{
 .seashell-section .list{
 	flex-direction: column;
 	width: 100%;
+	box-shadow: 0 10px 10px 0px rgb(223, 223, 223);
 }
 
 .seashell-section .explanation-name{
@@ -136,6 +142,47 @@ p{
 	background: #f1e0f8;
 	margin-right: 5px;
 	padding: 5px 8px;
+}
+
+.seashell-section p,.seashell-section span{
+	color: #7a7a7a;
+}
+
+.seashell-section .explanation{
+	display: flex;
+	flex-direction: column;
+}
+
+.seashell-section .explanation:nth-child(1){
+	flex-grow: 1;
+}
+
+.seashell-section .explanation:nth-child(2){
+	flex-grow: 2;
+}
+
+.seashell-section .explanation:nth-child(3){
+	flex-grow: 3;
+}
+
+.seashell-section .explanation:nth-child(4){
+	flex-grow: 1;
+}
+
+.seashell-section p{
+	font-size: 14px;
+	flex-grow: 2;
+}
+
+.plus-info{
+	border-top: 1px solid #eeeeee;
+	font-size: 12px;
+	margin-top: 24px;
+	padding-top: 24px;
+}
+
+.plus-info:nth-child(1){
+	pointer-events: none;
 }
 
 /* purple-section */
