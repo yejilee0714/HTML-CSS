@@ -81,6 +81,10 @@ p{
 	gap: 24px;
 }
 
+.image{
+	position: relative;
+}
+
 .list{
 	display: flex;
 	background: #fff;
@@ -142,7 +146,7 @@ p{
 .skill li{
 	font-size: 12px;
 	font-weight: 700;
-	color: #673399;
+	color: rgb(103, 51, 153);
 	border-radius: 5px;
 	background: #f1e0f8;
 	margin-right: 5px;
@@ -158,20 +162,8 @@ p{
 	flex-direction: column;
 }
 
-.seashell-section .explanation:nth-child(1){
-	flex-grow: 1;
-}
-
 .seashell-section .explanation:nth-child(2){
 	flex-grow: 2;
-}
-
-.seashell-section .explanation:nth-child(3){
-	flex-grow: 3;
-}
-
-.seashell-section .explanation:nth-child(4){
-	flex-grow: 0.5;
 }
 
 .seashell-section p{
@@ -192,7 +184,7 @@ p{
 
 .plus-info span{
 	font-size: inherit;
-	padding: 3px 0px;
+	padding-top: 5px;
 }
 
 .people-group img{
@@ -222,13 +214,8 @@ p{
 	z-index: 3;
 }
 
-.seashell-section .image{
-	position: relative;
-}
-
 .soldout-badge {
 	position: absolute;
-	/* background: url(./images/badge.png); */
 	z-index: 1;
 	max-width: 30%;
 	max-height: 40%;
@@ -271,28 +258,23 @@ p{
 
 .purple-section .list{
 	font-size: 18px;
-	z-index: 1;
 }
 
 .purple-section .image{
-	position: relative;
 	width: 26%;
 	background-color: #68339985;
-}
-
-.purple-section img{
-	position: absolute;
-	z-index: -1;
 }
 
 .purple-section .second-title{
 	position: absolute;
 	font-size: 30px;
 	font-weight: 500;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
 	color: #fff;
+	background-color: rgba(103, 51, 153, 0.4);
 }
 
 .purple-section .explanation-name{
@@ -302,6 +284,7 @@ p{
 
 .explanation-list li{
 	font-size: 14px;
+	margin-bottom: 10px;
 }
 
 /* 리스트 점 */
@@ -315,15 +298,7 @@ p{
 	border-radius: 50px;
 }
 
-.explanation-list li:first-of-type{
-	margin-bottom: 10px;
-}
-
-.explanation-list li:nth-of-type(2){
-	margin-bottom: 10px;
-}
-
-.purple-section .list:nth-of-type(2){
+.purple-section .list:nth-of-type(even){
 	flex-direction: row-reverse;
 	justify-content: space-between;
 }
@@ -333,8 +308,25 @@ p{
 		width: 80%;
 	}
 
+	header{
+		flex-direction: column;
+		align-items: start;
+	}
+
+	h1{
+		margin-bottom: 20px;
+	}
+
 	.seashell-section .content{
 		flex-direction: column;
+	}
+	.purple-section .list{
+		flex-direction: column;
+		
+	}
+	
+	.purple-section .image{
+		width: 100%;
 	}
 
 	/* 보라파트 반응형 */
