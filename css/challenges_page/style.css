@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li, div, section, body, header, span{
 	font-size: initial;
 }
 
+a{
+	color: initial;
+	text-decoration: none;
+}
+
 button{
 	border: none;
 	background: none;
@@ -27,6 +32,11 @@ ul, li{
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
+}
+
+.none-pointer{
+	pointer-events: none;
+	cursor: default;
 }
 
 /* 공통 */
@@ -66,9 +76,13 @@ p{
 }
 
 .content{
-	margin: 100px auto;
+	margin-top: 100px;
 	display: flex;
 	gap: 24px;
+}
+
+.image{
+	position: relative;
 }
 
 .list{
@@ -116,6 +130,7 @@ p{
 .seashell-section .list{
 	flex-direction: column;
 	width: 100%;
+	box-shadow: 0 10px 10px 0px rgb(223, 223, 223);
 }
 
 .seashell-section .explanation-name{
@@ -131,11 +146,80 @@ p{
 .skill li{
 	font-size: 12px;
 	font-weight: 700;
-	color: #673399;
+	color: rgb(103, 51, 153);
 	border-radius: 5px;
 	background: #f1e0f8;
 	margin-right: 5px;
 	padding: 5px 8px;
+}
+
+.seashell-section p,.seashell-section a{
+	color: #7a7a7a;
+}
+
+.seashell-section .explanation{
+	display: flex;
+	flex-direction: column;
+}
+
+.seashell-section .explanation:nth-child(2){
+	flex-grow: 2;
+}
+
+.seashell-section p{
+	font-size: 14px;
+	flex-grow: 2;
+}
+
+.plus-info{
+	border-top: 1px solid #eeeeee;
+	font-size: 12px;
+	margin-top: 24px;
+	padding-top: 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.plus-info span{
+	font-size: inherit;
+	padding-top: 5px;
+}
+
+.people-group img{
+	max-width: 30px;
+	max-height: 30px;
+	border: 5px solid white;
+	border-radius: 50%;
+	top: 50%;
+	transform: translate(50%, -15%);
+}
+
+.people-group img:first-of-type{
+	position: absolute;
+	right: 21%;
+	z-index: 1;
+}
+
+.people-group img:nth-of-type(2){
+	position: absolute;
+	right: 13%;
+	z-index: 2;
+}
+
+.people-group img:nth-of-type(3){
+	position: absolute;
+	right: 5%;
+	z-index: 3;
+}
+
+.soldout-badge {
+	position: absolute;
+	z-index: 1;
+	max-width: 30%;
+	max-height: 40%;
+	transform: translate(-8%, -8%);
 }
 
 /* purple-section */
@@ -174,28 +258,23 @@ p{
 
 .purple-section .list{
 	font-size: 18px;
-	z-index: 1;
 }
 
 .purple-section .image{
-	position: relative;
 	width: 26%;
 	background-color: #68339985;
-}
-
-.purple-section img{
-	position: absolute;
-	z-index: -1;
 }
 
 .purple-section .second-title{
 	position: absolute;
 	font-size: 30px;
 	font-weight: 500;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
 	color: #fff;
+	background-color: rgba(103, 51, 153, 0.4);
 }
 
 .purple-section .explanation-name{
@@ -205,6 +284,7 @@ p{
 
 .explanation-list li{
 	font-size: 14px;
+	margin-bottom: 10px;
 }
 
 /* 리스트 점 */
@@ -218,21 +298,41 @@ p{
 	border-radius: 50px;
 }
 
-.explanation-list li:first-of-type{
-	margin-bottom: 10px;
-}
-
-.explanation-list li:nth-of-type(2){
-	margin-bottom: 10px;
-}
-
-.purple-section .list:nth-of-type(2){
+.purple-section .list:nth-of-type(even){
 	flex-direction: row-reverse;
 	justify-content: space-between;
 }
 
 @media(max-width: 1080px){ 
 	.l_wrapper{
+		width: 80%;
+	}
+
+	header{
+		flex-direction: column;
+		align-items: start;
+	}
+
+	h1{
+		margin-bottom: 20px;
+	}
+
+	.seashell-section .content{
+		flex-direction: column;
+	}
+	.purple-section .list{
+		flex-direction: column;
+		
+	}
+	
+	.purple-section .image{
 		width: 100%;
+	}
+
+	/* 보라파트 반응형 */
+
+	.purple-section .list:nth-of-type(2){
+		flex-direction: column;
+		justify-content: initial;
 	}
 }
