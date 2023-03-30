@@ -1,4 +1,5 @@
-*{
+/* 초기화 */
+h1, h2, h3, h4, h5, h6, p, strong, ul, li, a{
     margin: 0px;
     padding: 0px;
 }
@@ -37,7 +38,7 @@ body{
 }
 
 h1{
-    margin: auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -48,4 +49,12 @@ p{
 
 a{
     font-size: 14px;
+}
+
+@media(max-width: 1080px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
 }
